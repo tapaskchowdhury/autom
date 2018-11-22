@@ -15,8 +15,8 @@ CSR_INFO_FILE=$2
 
 ## other params##
 GIT_URL=https://github.com/thefreeeman/autom.git
-CSR_INFO_PATH=/app/automation/pa/csr/info
-CSR_SH_PATH=/app/automation/pa/csr/sh
+CSR_INFO_PATH=/app/autom/pa/csr/info
+CSR_SH_PATH=/app/autom/pa/csr/sh
 CSR_GEN_FILE=csr-gen.sh
 
 do_git_clone(){
@@ -24,9 +24,9 @@ do_git_clone(){
 	echo "CSR_INFO_FILE is: $CSR_INFO_FILE " >> /app/params-check
 	echo "USERNAME is: $USERNAME" >> /app/params-check
 	cd /app
-	if [[ -d /app/automation ]]; then
+	if [[ -d /app/autom ]]; then
 		echo "git repo already exists; updating repo"
-		cd /app/automation && \
+		cd /app/autom && \
 		git clean -xdf &&\
 		git reset --hard &&\
 		git pull origin $GIT_BRANCH

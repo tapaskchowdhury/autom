@@ -14,7 +14,7 @@ CSR_INFO_FILE=$1
 #########################################################
 
 ## other params##
-CSR_INFO_PATH=/app/automation/pa/csr/info
+CSR_INFO_PATH=/app/autom/pa/csr/info
 #########################################################
 
 do_generate_csr_key() {
