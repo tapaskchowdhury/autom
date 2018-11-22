@@ -3,7 +3,7 @@
 #CSR_INFO_FILE
 
 FROM tchowdhury/my_centos:latest
-ARG GIT_URL=https://github.com/thefreeeman/autom
+ARG GIT_URL=https://raw.githubusercontent.com/thefreeeman/autom/
 ARG GIT_FEATURE_BRANCH=master
 COPY . /app
 RUN yum -y update && \
