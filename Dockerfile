@@ -15,8 +15,9 @@ RUN yum -y update && \
 	curl
 
 #### ENV GIT_URL=$GIT_URL
-RUN curl -kLJO $GIT_URL/raw/$GIT_FEATURE_BRANCH/pa/csr/sh/csr-init.sh
+RUN curl -kLJ $GIT_URL/raw/$GIT_FEATURE_BRANCH/pa/csr/sh/csr-init.sh \
+	-o /tmp/csr-init.sh && \
+	chmod +x /tmp/csr-init.sh
 
 WORKDIR /tmp
 CMD ./csr-init.sh $GIT_BRANCH $CSR_INFO_FILE
-
